@@ -1,0 +1,18 @@
+# Output:
+# c
+# b
+#  
+
+# Program: 
+
+begin 
+
+char a = 'c';
+
+println a;
+
+a = chr (ord a - 1);
+
+println a
+
+end

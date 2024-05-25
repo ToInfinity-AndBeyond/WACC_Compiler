@@ -1,0 +1,13 @@
+# Output:
+# #syntax_error#
+
+# Exit:
+# 100
+
+# Program:
+
+begin
+    pair(int, int) p = newpair(1, 2);
+    pair(pair, int) q = newpair(p, 3);
+    println []
+end

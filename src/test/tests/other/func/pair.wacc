@@ -1,0 +1,11 @@
+# Output:
+# a
+#
+
+begin
+    int[] y = [1, 2, 3];
+    char[] z = ['a', 'b', 'c'];
+    pair(char[], int[]) x = newpair(z, y);
+    char[] b = fst x;
+    println b[0]
+end

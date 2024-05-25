@@ -1,0 +1,16 @@
+# Note that the Input must be on the same line
+# Note that using println requires to add an empty line at the end (for print, omit this)
+
+# Input: 101
+
+# Output:
+# enter an integer to echo
+# 101
+#
+
+begin
+	int x = 1 ;
+  println "enter an integer to echo";
+	read x ;
+	println x
+end

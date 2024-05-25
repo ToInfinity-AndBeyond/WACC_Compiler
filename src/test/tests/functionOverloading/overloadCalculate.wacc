@@ -1,0 +1,45 @@
+# Output:
+# 3
+# 6
+# hello
+# false
+# false
+#
+
+begin
+  int calculate(int a, int b) is
+    return a + b
+  end
+
+  int calculate(int a, int b, int c) is
+    return a * b * c
+  end
+
+  string calculate(string a, string b) is
+    return a
+  end
+
+  bool calculate(bool a, bool b) is
+    return a && b
+  end
+
+  bool calculate(int a, int b, bool c) is
+    if (a == b) then
+      return c
+    else
+      return !c
+    fi
+  end
+
+  int sum = call calculate(1,2);
+  int product = call calculate(1,2,3);
+  string concatResult = call calculate("hello", " world");
+  bool andResult = call calculate(true, false);
+  bool conditionalResult = call calculate(1, 2, true);
+
+  println sum;
+  println product;
+  println concatResult;
+  println andResult;
+  println conditionalResult
+end

@@ -1,0 +1,17 @@
+.word 3
+    .L._readc_str0:
+    .asciz " %c"
+.align 4
+_readc:
+    push {fp, lr}
+    mov fp, sp
+    bic sp, sp, #0x7
+    sub sp, sp, #8
+    strb r0, [sp, #0]
+    mov r1, sp
+    adr r0, .L._readc_str0
+    bl scanf
+    ldrsb r0, [sp, #0]
+    add sp, sp, #8
+    mov sp, fp
+    pop {fp, pc}

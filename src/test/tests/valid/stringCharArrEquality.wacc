@@ -1,0 +1,10 @@
+# Output:
+
+# Program:
+
+begin
+    char[] arr = ['a'];
+    string str = "a";
+    bool b1 = arr == str;
+    bool b2 = str != arr
+end

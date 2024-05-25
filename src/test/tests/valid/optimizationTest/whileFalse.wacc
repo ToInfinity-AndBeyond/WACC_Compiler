@@ -1,0 +1,21 @@
+# Output:
+# 1
+# 1
+#  
+
+# Program: 
+
+begin 
+
+int a = 1;
+bool b = true;
+
+println a;
+
+while b && false do
+    a = a + 1
+done;
+
+println a
+
+end

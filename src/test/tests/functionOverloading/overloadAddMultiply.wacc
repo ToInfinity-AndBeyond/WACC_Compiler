@@ -1,0 +1,63 @@
+# Output:
+# 3
+# 6
+# 10
+# 15
+# 10
+# 24
+# 120
+# 720
+#
+
+begin
+  int add(int a, int b) is
+    return a + b
+  end
+
+  int add(int a, int b, int c) is
+    return a + b + c
+  end
+
+  int add(int a, int b, int c, int d) is
+    return a + b + c + d
+  end
+
+  int add(int a, int b, int c, int d, int e) is
+    return a + b + c + d + e
+  end
+
+  int multiply(int a, int b) is
+    return a * b
+  end
+
+  int multiply(int a, int b, int c) is
+    return a * b * c
+  end
+
+  int multiply(int a, int b, int c, int d) is
+    return a * b * c * d
+  end
+
+  int multiply(int a, int b, int c, int d, int e) is
+    return a * b * c * d * e
+  end
+
+  int sum2 = call add(1,2);
+  int sum3 = call add(1,2,3);
+  int sum4 = call add(1,2,3,4);
+  int sum5 = call add(1,2,3,4,5);
+
+  int product2 = call multiply(2,5);
+  int product3 = call multiply(2,3,4);
+  int product4 = call multiply(2,3,4,5);
+  int product5 = call multiply(2,3,4,5,6);
+
+  println sum2;
+  println sum3;
+  println sum4;
+  println sum5;
+  println product2;
+  println product3;
+  println product4;
+  println product5
+end

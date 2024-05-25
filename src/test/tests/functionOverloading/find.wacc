@@ -1,0 +1,39 @@
+# Output:
+# 0
+# 1
+#
+
+begin
+
+  int find(int[] array, int value) is
+    int i = 0 ;
+    while (i < len array) do
+      if (array[i] == value) then
+        return i
+      else
+      i = i + 1
+      fi
+    done ;
+    return -1  # Return -1 if the value is not found
+  end
+
+  int find(char[] array, char value) is
+    int i = 0 ;
+    while (i < len array) do
+      if (array[i] == value) then
+        return i
+      else
+      i = i + 1
+      fi
+    done ;
+    return -1  # Return -1 if the value is not found
+  end
+
+  char [] charArr = ['a', 'c','d','e'];
+  int[] intArr = [1,4,6,3,5,8,2];
+  int charArrIndex = call find(charArr, 'a');
+  int intArrIndex = call find(intArr, 4);
+
+  println charArrIndex;
+  println intArrIndex
+end

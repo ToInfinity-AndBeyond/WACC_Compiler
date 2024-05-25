@@ -1,0 +1,8 @@
+_malloc:
+	// push {lr}
+	stp lr, xzr, [sp, #-16]!
+	bl malloc
+	cbz x0, _errOutOfMemory
+	// pop {lr}
+	ldp lr, xzr, [sp], #16
+	ret

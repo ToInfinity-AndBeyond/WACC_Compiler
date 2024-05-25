@@ -1,0 +1,17 @@
+.word 2
+    .L._readi_str0:
+    .asciz "%d"
+.align 4
+_readi:
+    push {fp, lr}
+    mov fp, sp
+    bic sp, sp, #0x7
+    sub sp, sp, #8
+    str r0, [sp, #0]
+    mov r1, sp
+    adr r0, .L._readi_str0
+    bl scanf
+    ldr r0, [sp, #0]
+    add sp, sp, #8
+    mov sp, fp
+    pop {fp, pc}

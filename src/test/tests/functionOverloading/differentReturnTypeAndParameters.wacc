@@ -1,0 +1,52 @@
+# Output:
+# 3
+# 6
+# a
+# hello
+# true
+# 5
+# 
+
+begin
+  int f(int a, int b) is
+    return a + b
+  end
+
+  int f(int a, int b, int c) is
+    return a + b + c
+  end
+
+  char f(char a, char b) is
+    return a
+  end
+
+  string f(string a, string b) is
+    return a
+  end
+
+  bool f(bool a, bool b) is
+    return a || b
+  end
+
+  int f(int[] a, int[] b) is
+    return a[0] + b[1]
+  end
+
+
+  int sum2 = call f(1,2);
+  int sum3 = call f(1,2,3);
+  char charResult = call f('a', 'b');
+  string stringResult = call f("hello", " world");
+  bool boolResult = call f(true, false);
+
+  int [] a = [1,2];
+  int [] b = [3,4];
+  int arrayResult = call f(a,b);
+
+  println sum2;
+  println sum3;
+  println charResult;
+  println stringResult;
+  println boolResult;
+  println arrayResult
+end

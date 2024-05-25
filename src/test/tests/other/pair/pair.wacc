@@ -1,0 +1,11 @@
+# Output:
+# hi
+# 10
+#
+
+begin
+    pair(int, char) p = newpair(10, 'a');
+    println "hi";
+    int x = fst p;
+    println x
+end

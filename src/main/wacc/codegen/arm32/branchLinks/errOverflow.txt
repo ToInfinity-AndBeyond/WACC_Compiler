@@ -1,0 +1,12 @@
+@ length of .L._errOverflow_str0
+	.word 52
+.L._errOverflow_str0:
+	.asciz "fatal error: integer overflow or underflow occurred\n"
+.align 4
+_errOverflow:
+	@ external calls must be stack-aligned to 8 bytes, accomplished by clearing with mask 7
+	bic sp, sp, #0x7
+	adr r0, .L._errOverflow_str0
+	bl _prints
+	mov r0, #255
+	bl exit

@@ -1,0 +1,11 @@
+# Output:
+# #semantic_error#
+
+# Exit:
+# 200
+
+# Program:
+
+begin
+  char[] a = "hi"
+end

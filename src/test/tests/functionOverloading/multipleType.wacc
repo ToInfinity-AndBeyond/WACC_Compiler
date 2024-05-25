@@ -1,0 +1,41 @@
+# Output:
+# 1
+# 1
+# 1
+# 2
+# 3
+#
+
+begin
+  int f(int a, int b) is
+    return a
+  end
+
+  int f(int a, int b, int c) is
+    return a
+  end
+
+  int f(char a, int b) is
+    return b
+  end
+
+  int f(string a, int b) is
+    return b
+  end
+
+  int f(bool a, int b) is
+    return b
+  end
+
+  int a = call f(1,2);
+  int b = call f(1,2,3);
+  int c = call f('a', 1);
+  int d = call f("hello", 2);
+  int e = call f(true, 3);
+
+  println a;
+  println b;
+  println c;
+  println d;
+  println e
+end

@@ -1,0 +1,12 @@
+# when printing address, use placeholder #addrs#
+
+# Output:
+# #addrs#
+#
+
+# Program:
+
+begin
+  pair(int, char) p = newpair(10, 'a') ;
+  println p
+end

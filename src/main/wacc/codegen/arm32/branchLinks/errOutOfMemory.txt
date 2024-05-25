@@ -1,0 +1,10 @@
+.word 27
+    .L._errOutOfMemory_str0:
+    .asciz "fatal error: out of memory\n"
+.align 4
+_errOutOfMemory:
+    bic sp, sp, #0x7
+    adr r0, .L._errOutOfMemory_str0
+    bl _prints
+    mov r0, #255
+    bl exit

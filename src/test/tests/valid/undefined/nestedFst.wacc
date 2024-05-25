@@ -1,0 +1,10 @@
+# Output:
+# #undefined_behaviour#
+
+# Program:
+
+begin
+    pair(int, int) p = newpair(1, 2);
+    pair(pair, int) q = newpair(p, 3);
+    char c = fst fst fst q
+end

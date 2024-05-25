@@ -1,0 +1,34 @@
+# Output: 
+# 1
+# 3
+# true
+#
+
+begin
+  pair(int, int) f(int a, int b) is
+    pair(int, int) p = newpair(a, b);
+    return p
+  end
+
+  pair(int , int) f(int a, int b, int c) is
+    pair (int, int) p = newpair(a,c);
+    return p
+  end
+
+  pair(bool, bool) f (bool a, bool b) is
+    pair (bool, bool) p = newpair(true, false);
+    return p
+  end
+
+  pair(int, int) p1 = call f(1,2);
+  pair(int, int) p2 = call f(1,2,3);
+  pair(bool, bool) p3 = call f(true, false);
+
+  int a = fst p1;
+  int b = snd p2;
+  bool c = fst p3;
+  
+  println a;
+  println b;
+  println c
+end

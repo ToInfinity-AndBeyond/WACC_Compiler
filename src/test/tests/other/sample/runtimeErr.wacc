@@ -1,0 +1,15 @@
+# attempt divide by zero
+
+# Output:
+# Hello
+# #runtime_error#
+
+# Exit:
+# 255
+
+# Program:
+
+begin
+    println "Hello";
+	print 10 / 0
+end

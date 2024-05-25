@@ -1,0 +1,18 @@
+# Output:
+# false
+# false
+#  
+
+# Program: 
+
+begin 
+
+bool a = false || true && (1 > 2);
+
+println a;
+
+a = a && true;
+
+println a
+
+end

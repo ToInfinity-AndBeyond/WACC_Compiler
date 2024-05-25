@@ -1,0 +1,10 @@
+// length of .L._errOverflow_str0
+	.word 52
+.L._errOverflow_str0:
+	.asciz "fatal error: integer overflow or underflow occurred\n"
+.align 4
+_errOverflow:
+	adr x0, .L._errOverflow_str0
+	bl _prints
+	mov w0, #-1
+	bl exit

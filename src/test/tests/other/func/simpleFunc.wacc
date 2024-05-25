@@ -1,0 +1,12 @@
+# Output:
+# 8
+#
+
+begin
+  int f(int x, int y, int z, int w, int a) is
+    a = a + 1;
+    return a
+  end
+  int a = call f(3, 4, 5, 6, 7);
+  println a
+end

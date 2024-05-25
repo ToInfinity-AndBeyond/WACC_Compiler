@@ -1,0 +1,9 @@
+_malloc:
+    push {fp, lr}
+    mov fp, sp
+    bic sp, sp, #0x7
+    bl malloc
+    cmp r0, #0
+    bleq _errOutOfMemory
+    mov sp, fp
+    pop {fp, pc}

@@ -1,0 +1,9 @@
+# Output:
+# #semantic_error#
+
+# Exit:
+# 200
+
+begin
+  int a = 'h'
+end

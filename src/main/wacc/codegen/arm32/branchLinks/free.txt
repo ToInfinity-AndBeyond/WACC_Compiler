@@ -1,0 +1,7 @@
+_free:
+    push {fp, lr}
+    mov fp, sp
+    bic sp, sp, #0x7
+    bl free
+    mov sp, fp
+    pop {fp, pc}

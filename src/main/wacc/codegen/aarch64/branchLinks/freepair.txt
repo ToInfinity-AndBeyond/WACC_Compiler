@@ -1,0 +1,8 @@
+_freepair:
+	// push {lr}
+	stp lr, xzr, [sp, #-16]!
+	cbz x0, _errNull
+	bl free
+	// pop {lr}
+	ldp lr, xzr, [sp], #16
+	ret

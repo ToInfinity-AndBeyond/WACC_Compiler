@@ -1,0 +1,22 @@
+# Input: 5
+
+# Output:
+# 5
+# 4
+# 
+
+# Program: 
+
+begin 
+
+pair(int, int) p = newpair (3, 4);
+
+read fst p;
+
+int a = fst p;
+println a;
+
+a = snd p;
+println a
+
+end

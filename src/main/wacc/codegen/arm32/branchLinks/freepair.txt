@@ -1,0 +1,9 @@
+_freepair:
+    push {fp, lr}
+    mov fp, sp
+    bic sp, sp, #0x7
+    cmp r0, #0
+    bleq _errNull
+    bl free
+    mov sp, fp
+    pop {fp, pc}

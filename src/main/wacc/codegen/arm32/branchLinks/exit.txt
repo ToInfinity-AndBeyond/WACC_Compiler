@@ -1,0 +1,7 @@
+_exit:
+    push {fp, lr}
+    mov fp, sp
+    bic sp, sp, #0x7
+    bl exit
+    mov sp, fp
+    pop {fp, pc}

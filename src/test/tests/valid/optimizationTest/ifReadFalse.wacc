@@ -1,0 +1,28 @@
+# Input: 3
+#
+# Output:
+# 2
+# 3
+# correct
+#  
+
+# Program: 
+
+begin 
+
+int a = 1;
+int b = 2;
+
+println(b);
+
+read b;
+
+println(b);
+
+if a == b then
+    println "wrong"
+else
+    println "correct"
+fi
+
+end

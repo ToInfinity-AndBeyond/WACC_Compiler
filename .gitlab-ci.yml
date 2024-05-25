@@ -1,0 +1,37 @@
+stages:
+  - compile
+  - unit_test
+  - integration_test
+
+default:
+  image: gumjoe/wacc-ci-scala:slim
+
+variables:
+  GIT_SUBMODULE_STRATEGY: recursive
+
+compile:
+  stage: compile
+  script:
+    - scala-cli compile .
+
+frontend_unit_test:
+  stage: unit_test
+  script:
+    - scala-cli test . --test-only 'frontendUnitTest*' --server=false
+
+backend_unit_test:
+  stage: unit_test
+  script:
+    - scala-cli test . --test-only 'backendUnitTest*' --server=false
+
+integration_test_arm32:
+  image: gumjoe/wacc-ci-scala:arm32
+  stage: integration_test
+  script:
+    - scala-cli test . --test-only 'integrationTestArm32*' --server=false
+
+#integration_test_aarch64:
+#  image: gumjoe/wacc-ci-scala:arm64
+#  stage: integration_test
+#  script:
+#    - scala-cli test . --test-only 'integrationTestAarch64*' --server=false

@@ -1,0 +1,10 @@
+// length of .L._errDivZero_str0
+	.word 40
+.L._errDivZero_str0:
+	.asciz "fatal error: division or modulo by zero\n"
+.align 4
+_errDivZero:
+	adr x0, .L._errDivZero_str0
+	bl _prints
+	mov w0, #-1
+	bl exit

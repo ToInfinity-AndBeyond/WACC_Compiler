@@ -1,0 +1,23 @@
+# Output:
+# 1
+# 3
+#  
+
+# Program: 
+
+begin 
+
+int a = 1;
+bool b = false;
+
+println(a);
+
+if b && true then
+    a = 2
+else
+    a = 3
+fi;
+
+println(a)
+
+end

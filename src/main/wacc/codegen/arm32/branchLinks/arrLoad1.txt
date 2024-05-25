@@ -1,0 +1,11 @@
+_arrLoad1:
+    push {lr}
+    cmp r10, #0
+    movlt r1, r10
+    bllt _errOutOfBounds
+    ldr lr, [r3, #-4]
+    cmp r10, lr
+    movge r1, r10
+    blge _errOutOfBounds
+    ldrsb r3, [r3, r10]
+    pop {pc}

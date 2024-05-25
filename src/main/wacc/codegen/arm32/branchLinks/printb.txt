@@ -1,0 +1,28 @@
+.word 5
+    .L._printb_str0:
+    .asciz "false"
+.word 4
+    .L._printb_str1:
+    .asciz "true"
+.word 4
+    .L._printb_str2:
+    .asciz "%.*s"
+.align 4
+_printb:
+    push {fp, lr}
+    mov fp, sp
+    bic sp, sp, #0x7
+    cmp r0, #0
+    bne .L_printb0
+    adr r2, .L._printb_str0
+    b .L_printb1
+    .L_printb0:
+    adr r2, .L._printb_str1
+    .L_printb1:
+    ldr r1, [r2, #-4]
+    adr r0, .L._printb_str2
+    bl printf
+    mov r0, #0
+    bl fflush
+    mov sp, fp
+    pop {fp, pc}

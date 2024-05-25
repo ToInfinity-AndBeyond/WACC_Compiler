@@ -1,0 +1,8 @@
+# Output:
+# true
+#
+
+begin
+  bool b = true && false || true;
+  println b
+end

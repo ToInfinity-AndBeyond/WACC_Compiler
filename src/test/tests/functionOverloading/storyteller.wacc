@@ -1,0 +1,31 @@
+# Output:
+# Once upon a time, there was a serene village surrounded by mountains.
+# History of Joseon
+# No book
+#
+
+begin
+  string tellStory() is
+    return "Once upon a time, there was a serene village surrounded by mountains."
+  end
+
+  string tellStory(string name, bool flag) is
+    if (flag) then
+      return name
+    else
+      return "No book"
+    fi
+  end
+
+  string basic = call tellStory();
+  string nameWithTrue = call tellStory("History of Joseon", true);
+  string nameWithFalse = call tellStory("History of Joseon", false);
+
+  println basic;
+  println nameWithTrue;
+  println nameWithFalse
+end
+
+
+
+

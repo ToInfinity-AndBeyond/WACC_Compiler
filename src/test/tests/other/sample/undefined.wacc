@@ -1,0 +1,11 @@
+# undefined access to pair for "fst fst fst q" assigning to char
+# using undefined_behaviour does not check for any outputs/exitcodes, and allows errors from emulator
+
+# Output:
+# #undefined_behaviour#
+
+begin
+    pair(int, int) p = newpair(1, 2);
+    pair(pair, int) q = newpair(p, 3);
+    char c = fst fst fst q
+end

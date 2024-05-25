@@ -1,0 +1,22 @@
+# Output:
+# 1
+# 
+
+# Program: 
+
+begin 
+
+int f(int x, int y) is
+    int a = call g(y, x);
+    return a
+end
+
+int g(int x, int y) is
+    return x - y
+end
+
+int a = call f(3, 4);
+
+println(a)
+
+end

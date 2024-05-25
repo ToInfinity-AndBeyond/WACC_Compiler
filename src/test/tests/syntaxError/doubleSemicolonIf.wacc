@@ -1,0 +1,11 @@
+# Output:
+# #syntax_error#
+
+# Exit:
+# 100
+
+# Program:
+
+begin
+    if false then int x = 3;; x = 4 else int y = 2 end
+end

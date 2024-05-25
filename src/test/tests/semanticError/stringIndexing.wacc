@@ -1,0 +1,13 @@
+# Output:
+# #semantic_error#
+
+# Exit:
+# 200
+
+# Program:
+
+begin
+    int[] arr = [1, 2, 3];
+    string[] ss = ["hello", "bye"];
+    arr = ['a', ss[0], 3]
+end

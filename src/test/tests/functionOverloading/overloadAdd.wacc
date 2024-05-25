@@ -1,0 +1,20 @@
+# Output:
+# 3
+# 6
+#
+
+begin
+  int add(int a, int b) is
+    return a + b
+  end
+
+  int add(int a, int b, int c) is
+    return a + b + c
+  end
+
+  int sum2 = call add(1,2);
+  int sum3 = call add(1,2,3);
+
+  println sum2;
+  println sum3
+end

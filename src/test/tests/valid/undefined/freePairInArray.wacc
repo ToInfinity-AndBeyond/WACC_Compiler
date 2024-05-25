@@ -1,0 +1,11 @@
+# Output:
+# #undefined_behaviour#
+
+begin
+    pair(int, int) p = newpair(1, 2);
+    pair(int, int) q = newpair(3, 4);
+    pair(int, int)[] arr = [p, q];
+    free arr[0];
+    free p;
+    free arr   
+end

@@ -1,0 +1,34 @@
+# Output:
+# 3
+# 6
+# 10
+# 15
+#
+
+begin
+  int add(int a, int b) is
+    return a + b
+  end
+
+  int add(int a, int b, int c) is
+    return a + b + c
+  end
+
+  int add(int a, int b, int c, int d) is
+    return a + b + c + d
+  end
+
+  int add(int a, int b, int c, int d, int e) is
+    return a + b + c + d + e
+  end
+
+  int sum2 = call add(1,2);
+  int sum3 = call add(1,2,3);
+  int sum4 = call add(1,2,3,4);
+  int sum5 = call add(1,2,3,4,5);
+
+  println sum2;
+  println sum3;
+  println sum4;
+  println sum5
+end

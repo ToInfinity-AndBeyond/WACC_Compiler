@@ -1,0 +1,12 @@
+.word 42
+    .L._errOutOfBounds_str0:
+    .asciz "fatal error: array index %d out of bounds\n"
+.align 4
+_errOutOfBounds:
+    bic sp, sp, #0x7
+    adr r0, .L._errOutOfBounds_str0
+    bl printf
+    mov r0, #0
+    bl fflush
+    mov r0, #255
+    bl exit

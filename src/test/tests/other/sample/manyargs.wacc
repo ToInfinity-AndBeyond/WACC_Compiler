@@ -1,0 +1,19 @@
+# Output:
+# 5
+#
+
+# Program:
+
+begin
+  int x = 2 ;
+  int y = 6 ;
+  int z = 4 ;
+  int a = 4 ;
+  int b = 5;
+  int c = 5;
+  int d = 5;
+  int e = 501;
+  int f = 5;
+  int g = 5;
+  println f
+end
